@@ -1,8 +1,3 @@
-h1,h2,h3,h4,h5,h6, p, ul, li {
-  margin: 0;
-  padding: 0;
-}
-
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -26,25 +21,28 @@ h1,h2,h3,h4,h5,h6, p, ul, li {
 }
 
 .logo {
-  position: absolute;
   width: 183px;
   height: 32px;
-  z-index: 2;
 }
 
 .logo_place_header {
+  position: absolute;
   top: 30px;
   left: 64px;
+  z-index: 2;
+}
+
+.logo_place_header:hover {
+  width: 185px;
+  height: 34px;
 }
 
 .header__title {
-  display: flex;
-  width: 730px;
+  display: flex; 
+  max-width: 730px; 
   height: 100%;
+  margin: 0;
   align-items: center;
-}
-
-.header__title_settings {
   line-height: 96px;
   font-size: 102px;
   font-weight: bold;
@@ -53,6 +51,7 @@ h1,h2,h3,h4,h5,h6, p, ul, li {
 }
 
 .header__subtitle {
+  box-sizing: border-box;
   position: absolute;
   left: 64px;
   bottom: 30px;
@@ -66,6 +65,10 @@ h1,h2,h3,h4,h5,h6, p, ul, li {
 .header__link {
   color: #2f80ed;
   text-decoration: none;
+}
+
+.header__link:hover {
+  border-bottom: 1px solid #2f80ed;
 }
 
 .header__main-illustration {
@@ -99,11 +102,10 @@ h1,h2,h3,h4,h5,h6, p, ul, li {
 }
 
 .two-columns__brief {
+  margin: 0;
+  padding: 0;
   width: 175px;
   color: #2f80ed;
-}
-
-.brief_settings {
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
@@ -114,9 +116,12 @@ h1,h2,h3,h4,h5,h6, p, ul, li {
   min-width: 784px;
 }
 
-/*У последнего параграфа убирает отступ*/
-.two-columns__main-text p:last-of-type {
-  padding-bottom: 0px;
+.two-columns__paragraph {
+  margin: 0;
+  padding: 0;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
 }
 
 .two-columns__paragraph {
@@ -126,42 +131,37 @@ h1,h2,h3,h4,h5,h6, p, ul, li {
   padding-bottom: 30px;
 }
 
-.span-accent {
+.two-columns__span-accent {
   font-weight: bold;
+}
+
+/*У последнего параграфа убирает отступ*/
+.two-columns__paragraph:last-of-type {
+  padding-bottom: 0;
 }
 /*Конец блока description*/
 .section-title {
-  box-sizing: border-box;
   width: 60%;
   margin: 0 auto;
   text-align: center;
   margin-bottom: 20px;
-}
-
-.section-subtitle {
-  width: 60%;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.section-title_settings {
   line-height: 69px;
   font-size: 60px;
   font-weight: bold;
 }
 
-.section-subtitle_settings {
+.section-subtitle {
+  margin: 0 auto;
+  padding: 0;
+  width: 60%;
+  text-align: center;
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
 }
 
-.table-container {
-  display: flex;
-  justify-content: center;
-}
-
 .table {
+  margin: 0 auto;
   width: 1100px;
   display: flex;
   justify-content: space-between;
@@ -174,25 +174,26 @@ h1,h2,h3,h4,h5,h6, p, ul, li {
   padding-top: 60px;
 }
 
-.table-title {
+.table__heading {
+  margin: 0;
+  padding: 0;
   line-height: 1.5;
   font-size: 24px;
   font-weight: bold;
-  padding-bottom: 20px;
 }
 
 .table__text {
+  margin: 0;
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
 }
 
 /*Если у карточки присутствует 2 и более парагрофов добавляет отсту всем кроме первого*/
-.table__text p:not(:first-child) {
+.table__text:not(:first-child) {
   padding-top: 20px;
 }
 /*Конец блока digits*/
-
 .feynman {
   box-sizing: border-box;
   position: relative;
@@ -200,7 +201,7 @@ h1,h2,h3,h4,h5,h6, p, ul, li {
   background-repeat: no-repeat;
   background-size: auto;
   background-position: left bottom;
-  height: 790px;
+  min-height: 790px;
   background-color: #f2f2f2;
   padding-top: 100px;
 }
@@ -210,9 +211,6 @@ h1,h2,h3,h4,h5,h6, p, ul, li {
   width: 648px;
   margin-bottom: 70px;
   text-align: center;
-}
-
-.feynman__title_settings {
   line-height: 1.15;
   font-size: 120px;
   font-weight: bold;
@@ -221,9 +219,6 @@ h1,h2,h3,h4,h5,h6, p, ul, li {
 .feynman__subtitle {
   margin: 0 auto;
   text-align: center;
-}
-
-.feynman__subtitle_settings {
   line-height: 51px;
   font-size: 36px;
   font-weight: normal;
@@ -233,16 +228,18 @@ h1,h2,h3,h4,h5,h6, p, ul, li {
   position: absolute;
   right: 48px;
   top: 50%;
-}
-
-.feynman__link_settings {
   text-decoration: none;
   line-height: 51px;
   font-size: 36px;
   font-weight: normal;
+  color: black;
+}
+
+.feynman__link:hover {
+  font-size: 37px;
+  border-bottom: 2px solid black;
 }
 /*Конец блока feynman*/
-
 .kaufman {
   box-sizing: border-box;
   position: relative;
@@ -251,18 +248,18 @@ h1,h2,h3,h4,h5,h6, p, ul, li {
   overflow: hidden;
 }
 
-.section-title_theme-dark {
+.section-title_theme_dark {
   padding-top: 90px;
   z-index: 1;
 }
 
-.table__cell_theme-dark {
+.table__cell_theme_dark {
   width: 200px;
   padding-top: 80px;
   z-index: 1;
 }
 
-.table_theme-dark {
+.table__theme_dark {
   padding-bottom: 90px;
   z-index: 1;
 }
@@ -273,12 +270,11 @@ h1,h2,h3,h4,h5,h6, p, ul, li {
   position: absolute;
   top: 0;
   right: -210px;
+  background-image: url(../images/kaufman-triangle.svg);
   z-index: 0;
 }
 /*Конец блока kaufman*/
-
 .footer {
-  box-sizing: border-box;
   min-height: 350px;
   background-color: #1f1f1f;
   padding-top: 60px;
@@ -292,7 +288,6 @@ h1,h2,h3,h4,h5,h6, p, ul, li {
 }
 
 .footer__columns {
-  box-sizing: border-box;
   min-height: 350px;
   width: 90%;
   margin: 0 auto;
@@ -300,16 +295,21 @@ h1,h2,h3,h4,h5,h6, p, ul, li {
   justify-content: space-between;
 }
 
-.footer__column_content-copyright {
+.footer__column_content_copyright {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   flex-basis: 711px;
 }
 
-.logo_place-footer {
+.logo_place_footer {
   width: 183px;
   height: 35px;
+}
+
+.logo_place_footer:hover {
+  width: 185px;
+  height: 37px;
 }
 
 .footer__author {
@@ -319,24 +319,44 @@ h1,h2,h3,h4,h5,h6, p, ul, li {
   font-weight: normal;
 }
 
-.footer-heading {
+.footer__author a:hover {
+  border-bottom: 1px solid white;
+}
+
+.footer__column-heading {
+  margin: 0;
+  padding: 0;
   line-height: 30px;
   font-size: 18px;
   font-weight: bold;
   padding-bottom: 20px;
 }
 
-.footer-links {
-  padding-bottom: 16px;
+.footer__column-links {
+  margin: 0;
+  padding: 0;
 }
 
-.footer-links__item {
+.footer__column-link {
+  margin: 0;
+  padding: 0;
   list-style: none;
   line-height: 30px;
   font-size: 18px;
   font-weight: normal;
+  padding-bottom: 16px;
+}
+
+.footer__column-link_border:hover {
+  border-bottom: 2px solid white;
+}
+
+/*Убирает у последнего элемента отступ снизу*/
+.footer__column-link:last-child {
+  padding-bottom: 0;
 }
 
 .footer__social-icon {
   padding-right: 10px;
 }
+
