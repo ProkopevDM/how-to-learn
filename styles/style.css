@@ -122,12 +122,6 @@
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
-}
-
-.two-columns__paragraph {
-  line-height: 34px;
-  font-size: 24px;
-  font-weight: normal;
   padding-bottom: 30px;
 }
 
@@ -271,6 +265,7 @@
   top: 0;
   right: -210px;
   background-image: url(../images/kaufman-triangle.svg);
+  background-size: contain;
   z-index: 0;
 }
 /*Конец блока kaufman*/
@@ -335,28 +330,24 @@
 .footer__column-links {
   margin: 0;
   padding: 0;
+  padding-bottom: 16px;
 }
 
-.footer__column-link {
+.footer__list-item {
   margin: 0;
   padding: 0;
   list-style: none;
   line-height: 30px;
   font-size: 18px;
   font-weight: normal;
-  padding-bottom: 16px;
 }
 
-.footer__column-link_border:hover {
+.footer__column-link:hover {
   border-bottom: 2px solid white;
-}
-
-/*Убирает у последнего элемента отступ снизу*/
-.footer__column-link:last-child {
-  padding-bottom: 0;
 }
 
 .footer__social-icon {
   padding-right: 10px;
 }
 
+/*Предложения в span я оборачивал, чтобы при наведении padding-bottom появлялся только у слов, а у иконок его не было, но не суть, пусть будет как есть*/
