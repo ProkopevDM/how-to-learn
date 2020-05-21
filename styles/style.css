@@ -277,7 +277,7 @@
   color: white;
 }
 
-.footer a {
+.footer__column-link {
   text-decoration: none;
   color: white;
 }
@@ -314,10 +314,6 @@
   font-weight: normal;
 }
 
-.footer__author a:hover {
-  border-bottom: 1px solid white;
-}
-
 .footer__column-heading {
   margin: 0;
   padding: 0;
@@ -343,7 +339,7 @@
 }
 
 .footer__column-link:hover {
-  border-bottom: 2px solid white;
+  border-bottom: 1px solid white;
 }
 
 .footer__social-icon {
