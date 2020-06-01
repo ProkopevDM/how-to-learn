@@ -1,0 +1,11 @@
+.table__text {
+  margin: 0;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+/*Если у карточки присутствует 2 и более парагрофов добавляет отсту всем кроме первого*/
+.table__text:not(:first-child) {
+  padding-top: 20px;
+}
