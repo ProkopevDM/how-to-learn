@@ -3,7 +3,6 @@
 @import url(./__heading/table__heading.css);
 @import url(./__text/table__text.css);
 @import url(./__theme/table__theme.css);
-@import url(./__theme/_dark/table__theme_dark.css);
 
 .table {
   margin: 0 auto;
